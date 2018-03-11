@@ -4,7 +4,7 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 100px;
 }
 
 .App-header {
@@ -12,6 +12,7 @@
   height: 150px;
   padding: 20px;
   color: white;
+  /* animation: change-color infinite 20s linear alternate; */
 }
 
 .App-title {
@@ -21,8 +22,51 @@
 .App-intro {
   font-size: large;
 }
+@keyframes change-color {
+  from {background-color: gold}
+  20% {background-color: purple}
+  40% {background-color: palegreen}
+  60% {background-color: green}
+  80% {background-color: orange}
+  100% {background-color: navy}
 
+}
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+.App-persons {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Person {
+  margin: 10px;
+  padding: 10px;
+  flex-grow: 1;
+  box-shadow: 0 1px 3px gray;
+}
+.Excel {
+
+}
+.Excel table {
+  margin: 0 auto;
+  width: 90%;
+  border-collapse: collapse;
+}
+.Excel table thead th:nth-child(even) {
+  background-color: darkgray;
+  color: white;
+}
+.Excel table thead th:nth-child(odd) {
+  background-color: rgb(117, 117, 117);
+  color: white;
+}
+.Excel table tr:nth-child(even) {
+  background-color: #ebebeb;
+}
+.Excel table td,th {
+  padding: 10px;
+  width: 20%;
+  user-select: none;
 }
